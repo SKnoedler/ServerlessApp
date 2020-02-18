@@ -1,0 +1,12 @@
+service: job-scraper
+
+provider:
+  name: aws
+  runtime: python3.6
+
+package:
+  artifact: job_scraper/package.zip
+
+functions:
+  job_scrape:
+    handler: handler.scrape
